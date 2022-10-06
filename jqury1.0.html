@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       /* *{
+        background-color: aquamarine;
+        color:aliceblue;
+       } */
+       /* div{
+        background-color: brown;
+        color:white;
+       } */
+       #div1{
+        background-color: black;
+        color: white;
+       }
+       .div2{
+background-color: crimson;
+color: white;
+       }
+       h1,p{
+        background-color: coral;
+        color:blueviolet
+       }
+       div p {
+        background-color: darkcyan;
+        color:white;
+       }
+       div > p{
+        background-color: chartreuse;
+        color:aliceblue;
+       }
+       div + p{
+        background-color: lightblue;
+        color:black;
+       }
+       div ~ p{
+        background-color: mediumorchid;
+        color: white;
+       }
+       div > p >   span {
+        background-color: black;
+        color: antiquewhite;
+       }
+
+
+    </style>
+</head>
+<body>
+    <!-- //css selectors -->
+    <div> i am div</div><br>
+    <div id="div1">i am inside id selector</div><br>
+    <div class="div2">i am inside class selector</div>
+
+    <h1> i am h1</h1>
+    <p>i am parta</p>
+
+    <!-- combonators in css -->
+    <!-- 1-descendant combinators (it can be apply using space)
+        2-child combinators( it can be apply using incresing arrow >)
+        3-adjesent sibling (it can be apply using +)
+        4-general sibling (it can be apply using ~)
+
+     -->
+     <div>
+        <p>i am inside div tag</p>
+        <div>
+            <p>i am inside section</p>
+        </div>
+     </div>
+
+     <div>
+        <p>i am child of p tag</p>
+     </div>
+     <p>i am sibling of div</p>
+     <p> i am another sibling</p>
+
+     <div>
+        <p>
+             <span> i am uniqe</span>
+            
+         
+        </p>
+     </div>
+</body>
+</html>
