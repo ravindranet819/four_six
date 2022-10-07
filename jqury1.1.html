@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <style>
+        .color{
+            background-color: blue;
+            color:white;
+        }
+        .div1{
+            background-color: cyan;
+            color: white;
+
+        }
+        .div2{
+            background-color: darkgreen;
+            color: blanchedalmond;
+            
+        }
+        .div3{
+            background-color: deeppink;
+            color: aliceblue;
+            
+        }
+        .div4{
+            background-color: orange;
+            color: aliceblue;
+            
+        }
+    </style>
+</head>
+<body>
+    <p>i am p1</p>
+    <p>i am p2</p>
+    <p>i am p3</p>
+    <h2 >i am h2</h2>
+
+    <div class="div1">i am div 1</div>
+    <div class="div2">i am div 2</div>
+    <div class="div3">i am div 3</div>
+    <div class="div4">i am div 4</div>
+
+    <h1>i am h1</h1>
+    <h1>i am h2</h1>
+    <h1>i am h3</h1>
+    <h1>i am h4</h1>
+    <section>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid voluptate ipsa repudiandae rem illum suscipit! Quo, at maxime inventore ipsa atque quaerat id repellendus numquam ea magnam esse. Doloremque, sunt!
+    </section>
+    <script>
+        
+        
+        // $(document).ready(function()
+        // {
+
+        //   $("p").addClass("color")
+         
+
+        // }
+        // );
+        // console.log($);
+
+        $("p").last().addClass("color");
+        $("div").last().removeClass();
+        $("div").last().html("hello");
+        
+        // $("div").click(function()
+        // {
+        //     $("div").last().html("hello i am clicked");
+        // });
+
+
+        // $("div").click(function()
+        // {
+        //     $("div").first().css("background-color","red","color","black");
+        // });
+
+        // $("h1").click(function()
+        // {
+        //     $("h1").first().hide();
+        // });
+
+
+        $("div").click(function()
+        {
+            $("div").first().add("h2").css({"background-color":"blue","color":"white"});
+        });
+
+
+        $("section").dblclick(function()
+        {
+            $("section").css({"background-color":"blue","color":"white"});
+        });
+
+        
+
+
+        
+
+        
+
+        </script>
+</body>
+</html>
