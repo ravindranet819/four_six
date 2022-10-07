@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         div p{
+            background-color: aqua;
+            color: white;
+        } 
+        div > p{
+            background-color: hotpink;
+            color: whitesmoke;
+
+        }
+        div + P{        
+            background-color: darkgreen;
+            color: white;
+
+        }
+         
+          div ~ p{   
+            background-color: dodgerblue;
+            color: bisque;
+         }
+        
+
+    </style>
+</head>
+<body>
+    <div>
+        <p> i am first p</p>
+        <p> i am last p</p>
+        <div>
+            <h1>i am heading</h1>
+            <p>inside section</p>
+        </div>
+    </div>
+    <p>i am first sibling</p>
+    <p>i am last sibling</p>
+    <p>i am last sibling</p>
+    <p>i am last sibling</p>
+</body>
+</html>
