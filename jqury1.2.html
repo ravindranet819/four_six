@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <style>
+        #h2{
+            width:40%;
+
+        }
+        #image{
+            width: 40%;
+            height: 100%;
+            
+        }
+        .div1{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+        }
+        #inner{
+            width: 100%;
+            height: 40%;
+
+
+        }
+        #add{
+            background-color: crimson;
+            color: white;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="change">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum debitis harum reiciendis est voluptates aperiam assumenda architecto expedita alias! Dolorem commodi non sed expedita molestiae debitis, dolor ea ut laborum.</div><br><br>
+
+    <div class="hey">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia autem odit quae facere, reiciendis harum ipsum fuga suscipit hic optio repudiandae natus ad ea quos sit atque enim dolores ex!</div><br><br>
+    <h1 id="h1">hello i am heading</h1>
+    <h1 id="h2">hello i am another one</h1><br>
+
+    <div class="div1">
+        <div id="inner"><img src="img3.jpg" id="image"></div>
+    </div><br>
+    <p id="add">hello i am para</p>
+    <p id="see">hello let me see</p>
+
+    
+    <!-- <button id="btn">reset</button> -->
+    
+    <script>
+        $("div.change").css("background-color" ,"red").css("color","white");
+        $("div.hey").css({"background-color":"aqua","color":"red"});
+        $("#h1").click(
+                        function() 
+                        {
+                        $( "#h1" ).animate(
+                            {width: "70%",marginLeft: "0.6in",fontSize: "3em",borderWidth: "10px",}, 1500 )}
+                        )
+
+                        $("#h1").css({"background-color":"crimson","color":"white"})
+
+                        
+                        
+                        
+                        
+                        
+                        $("#h2").click(
+                        function() 
+                        {
+                        $( "#h2" ).animate(
+                            {width: "100%",marginLeft: "0.6in",fontSize: "3em",borderWidth: "10px",}, 1500 )}
+                        )
+                        $("#h2").css({"background-color":"crimson","color":"white"})
+
+
+
+                        $("#h2").dblclick(
+                        function() 
+                        {
+                        $( "#h2" ).animate(
+                            {width: "40%",fontSize: "2em",borderWidth: "10px",}, 1500 )}
+                        )
+
+
+
+
+                        $("#inner").click(
+                        function() 
+                        {
+                        $( "#image" ).animate(
+                            {width: "100%",height:"100vh",fontSize: "3em",borderWidth: "10px",}, 5000 )}
+                        )
+
+
+
+                        $("#add").click(
+                        function() 
+                        {
+                        $( "#add" ).clone().appendTo("#add")
+                        })
+
+
+
+                        $("#see").click(
+                        function() 
+                        {
+                        $( "#see" ).append("<p>hello i am p</p>");
+                        })
+                       
+                     
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="hello">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam voluptatibus, labore esse fugiat inventore similique, ex sint consequatur, itaque omnis facere quibusdam natus. Maiores, reprehenderit fuga! Architecto odit ex unde!</p>
+
+    <p class="hi">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam voluptatibus, labore esse fugiat inventore similique, ex sint consequatur, itaque omnis facere quibusdam natus. Maiores, reprehenderit fuga! Architecto odit ex unde!</p>
+
+    <h1>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam voluptatibus, labore esse fugiat inventore similique, ex sint consequatur, itaque omnis facere quibusdam natus. Maiores, reprehenderit fuga! Architecto odit ex unde!</h1>
+
+    <h2 class="hi">hi i am h1</h2>
+
+    <button onclick="f1()">one</button>
+    <button onclick="f2()">two</button>
+    <button onclick="f3()">thjree</button>
+    <button onclick="f4()">free</button>
+    
+    <script>
+        function f1(){
+            document.getElementById("hello").innerHTML="clear1";
+        }
+        function f2(){
+            document.getElementsByClassName("hi")[0].innerHTML="clear2";
+        }
+        function f3(){
+            document.getElementsByTagName("h1")[0].innerHTML="clear3";
+        }
+        function f4(){
+            document.getElementsByClassName("hi")[1].innerHTML="clear4";
+        }
+    </script>
+</body>
+</html>
