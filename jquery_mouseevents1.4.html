@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<style>
+  .selected{
+    background-color: aqua;
+    color: blue;
+  }
+</style>
+
+
+    <!-- 
+    <style>
+      div{
+        background-color: cornflowerblue;
+        color: black;
+        font-size: 20px;
+      }
+      span{
+        color: crimson;
+        font-size: 40px;
+      }
+    </style> -->
+
+
+    <!-- <style>
+        #div1{
+            background: blue;
+    color: white;
+    height: 100px;
+    width: 150px;
+        }
+
+
+        .context {
+    background: yellow;
+    color: black;
+  }
+  span{
+    background-color: black;
+    color: crimson;
+    font-size: 30px;
+  } -->
+<!--   
+  /* #div2{
+    background: blue;
+    color: white;
+    height: 100px;
+    width: 150px;
+  }
+  #div2.dbl {
+    background: yellow;
+    color: black;
+  } */
+
+    </style> -->
+
+ <!-- <style>
+    div.out {
+      width: 40%;
+      height: 120px;
+      margin: 0 15px;
+      background-color: #d6edfc;
+      float: left;
+    }
+    div.in {
+      width: 60%;
+      height: 60%;
+      background-color: #fc0;
+      margin: 10px auto;
+    }
+    p {
+      line-height: 1em;
+      margin: 0;
+      padding: 0;
+    }
+    </style> -->
+
+
+
+    <!--  keydown <style>
+        fieldset {
+          margin-bottom: 1em;
+        }
+        input {
+          display: block;
+          margin-bottom: .25em;
+        }
+        #print-output {
+          width: 100%;
+        }
+        .print-output-line {
+          white-space: pre;
+          padding: 5px;
+          font-family: monaco, monospace;
+          font-size: .7em;
+        }
+        </style> -->
+
+</head>
+
+
+
+<body>
+
+
+
+
+<!-- data()       function -->
+    <!-- <div>
+    The values stored were
+    <span id="fir"></span>
+    and
+    <span id="sec"></span>
+    and
+    <span id="third"></span>
+    and
+    <span id="for"></span>
+  </div>
+   
+  <script>
+
+  $( "div" ).data( "test", { first: 16, second: "pizza!",third:"raj",four:"mahesh" } );
+  $( "#fir" ).first().text( $( "div" ).data( "test" ).first );
+  $( "#sec" ).last().text( $( "div" ).data( "test" ).second );
+  $( "#third" ).last().text( $( "div" ).data( "test" ).third);
+  $( "#for" ).last().text( $( "div" ).data( "test" ).four ); -->
+
+  <!-- // $( "div" ).removeData( "test" ) -->
+
+  </script>
+
+
+
+  <!-- <script>
+    var map={1:["ravi","savi"]}
+
+    console.log(map[1])
+  </script> -->
+
+
+
+
+
+
+  
+  
+  
+  
+  <!-- <div>value1 before creation: <span></span></div>
+<div>value1 after creation: <span></span></div>
+<div>value1 after removal: <span></span></div>
+<div>value2 after removal: <span></span></div>
+ 
+<script>
+$( "span" ).eq( 0 ).text( "" + $( "div" ).data( "test1" ) );
+
+$( "div" ).data( "test1", "rakesh" );
+
+$( "div" ).data( "test2", "suresh" );
+
+$( "span" ).eq( 1 ).text( "" + $( "div").data( "test1" ) );
+$( "div" ).removeData( "test1" );
+
+$( "span" ).eq( 1 ).text( "" + $( "div").data( "test2" ) );
+$( "div" ).removeData( "test2" );
+
+
+$( "span" ).eq( 2 ).text( "" + $( "div" ).data( "test1" ) );
+$( "span" ).eq( 3 ).text( "" + $( "div" ).data( "test2" ) );
+</script> -->
+
+
+
+
+
+
+
+
+    <!-- <div>Click here</div>
+
+    <br><br>
+<div class="hi">to iterate through</div><br><br>
+
+<div>these divs.</div>
+
+
+<p class="hi">hello i am para</p>
+ 
+<script>
+$( document.body ).click(function() {
+  $( ".hi" ).each(function( i ) {
+    if ( this.style.color !== "red" ) {
+      this.style.color = "red";
+    } else {
+      this.style.color = "green";
+    }
+  });
+});
+</script> -->
+
+
+
+
+
+<!-- mouse-events -->
+
+
+
+ <!-- 1 click -->
+ 
+ 
+ <!-- <p>First Paragraph</p>
+<p>Second Paragraph</p>
+<p>Yet one more Paragraph</p>
+ 
+<script>
+$( "p" ).click(function() {
+  $( this ).slideUp();
+});
+</script> -->
+
+
+
+
+
+
+<!-- <p>i am p</p>
+ 
+<script>
+
+$( "p" ).contextmenu(function() {
+  alert( "i am right clicked" );
+});
+
+
+</script> -->
+
+
+
+
+
+
+
+<!-- <div id="div2"></div>
+<span>Double click the block</span>
+ 
+<script>
+$("span").dblclick(function() {
+  alert( "i am double clicked" );
+});
+</script> -->
+
+
+
+
+
+
+<!-- <ul>
+  <li>Milk</li>
+  <li>Bread</li>
+  <li class="fade">Chips</li>
+  <li class="fade">Socks</li>
+</ul> -->
+ 
+<!-- <script>
+$( "li" ).hover(
+  function() {
+    $( this ).append( $( "<span> i am hovered </span>" ) );
+  },
+
+   function() {
+    $( this ).find( "span" ).last().remove();
+  }
+);
+ 
+$( "li.fade" ).hover(function() {
+  $( this ).fadeOut( 100 );
+  $( this ).fadeIn( 500 );
+});
+</script>  -->
+
+
+
+<!-- <p>Press mouse and release here.</p>
+ 
+<script>
+$( "p" )
+  .mouseup(function() {
+    $( this ).append( "<span style='color:#f00;'>Mouse up.</span>" );
+  })
+  .mousedown(function() {
+    $( this ).append( "<span style='color:#00f;'>Mouse down.</span>" );
+  });
+</script> -->
+
+
+
+
+  <!-- <div class="out overout">
+    <p>move your mouse</p>
+    <div class="in overout"><p>move your mouse</p><p>0</p></div>
+    <p>0</p>
+  </div>
+   
+  <div class="out enterleave">
+    <p>move your mouse</p>
+    <div class="in enterleave"><p>move your mouse</p><p>0</p></div>
+    <p>0</p>
+  </div>
+   
+  <script>
+  var i = 0;
+  $( "div.overout" )
+    .mouseover(function() {
+      $( "p", this ).first().text( "mouse over" );
+      $( "p", this ).last().text( ++i );
+    })
+    .mouseout(function() {
+      $( "p", this ).first().text( "mouse out" );
+    });
+   
+  var n = 0;
+  $( "div.enterleave" )
+    .mouseenter(function() {
+      $( "p", this ).first().text( "mouse enter" );
+      $( "p", this ).last().text( ++n );
+    })
+    .mouseleave(function() {
+      $( "p", this ).first().text( "mouse leave" );
+    });
+  </script> -->
+  <!-- <table>
+    <tr>
+      <td>rama</td>
+      <td>ramanuj</td>
+    </tr>
+  </table>
+
+
+<script>
+  
+   $( "td" ).toggle(
+  function() {
+    $( this ).addClass( "selected" );
+  }
+  //  function() {
+  //   $( this ).removeClass( "selected" );
+  // }
+);
+</script> -->
+
+
+
+
+
+<!-- keydown() <form>
+    <fieldset>
+      <label for="target">Type Something:</label>
+      <input id="target" type="text">
+    </fieldset>
+  </form>
+  <button id="other">
+    Trigger the handler
+  </button>
+  <script type="text/javascript" src="/resources/events.js"></script>
+   
+  <script>
+  var xTriggered = 0;
+  $( "#target" ).keydown(function( event ) {
+    if ( event.which == 13 ) {
+     event.preventDefault();
+    }
+    xTriggered++;
+    var msg = "Handler for .keydown() called " + xTriggered + " time(s).";
+    $.print( msg, "html" );
+    $.print( event );
+  });
+   
+  $( "#other" ).click(function() {
+    $( "#target" ).keydown();
+  });
+  </script> -->
+
+
+    
+</body>
+</html>
