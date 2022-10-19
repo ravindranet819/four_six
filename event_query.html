@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <p id="click">i am paragraph</p>
+    <h1>heading</h1>
+    
+    <h2>heading2</h2>
+    <h3>heading 3</h3>
+    <div>kdjasd</div>
+    <b>click on me to toggle</b><br><br>
+    <del>i am deleted</del><br><br>
+    <i>animate div</i><br><br>
+    <h4>toggle div</h4>
+    <script>
+        $(function(){
+            $("p").click(function(){
+                $("p").hide();
+            })
+        })
+        $(function(){
+            $("h1").click(function(){
+                $("p").show();
+            })
+        })
+        $(function(){
+            $("h2").click(function(){
+                $("div").fadeIn();
+            })
+        })
+        $(function(){
+            $("h3").click(function(){
+                $("div").fadeOut();
+            })
+        })
+        $(function(){
+            $("h3").click(function(){
+                $("p").slideUp();
+            })
+        })
+        $(function(){
+            $("h2").click(function(){
+                $("p").slideDown();
+            })
+        })
+        $(function(){
+            $("b").click(function(){
+                $("div").fadeToggle(2000);
+            })
+        })
+        $(function(){
+            $("del").click(function(){
+                $("div").slideToggle(2000);
+            })
+        })
+        $(function(){
+            $("i").click(function(){
+                $("div").animate({width:"80%"},2000);
+            })
+        })
+        $(function(){
+            $("h4").click(function(){
+                $("div").toggle(2000);
+            })
+        })
+
+
+        
+    </script>
+</body>
+</html>

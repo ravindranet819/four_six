@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <style>
+        button{
+            padding: 10px;
+            font-size: 20px;
+
+        }
+    </style>
+</head>
+<body>
+    <label for="fnum1">enter first number</label>
+
+    <input type="text" name="fnum1" id="num1" ><br><br>
+
+    <label for="fnum2">enter first number</label>
+
+    <input type="text" name="fnum2" id="num2" ><br><br>
+    <button id="add">+</button>
+    <button id="sub">-</button>
+    <button id="mul">*</button>
+    <button id="dev">/</button>
+
+    <h1 id="ans">perform your action</h1>
+
+    <script>
+        $(function() {
+   
+
+      
+
+            $("#add").click(function(){
+                const num1 =parseInt($("#num1").val());
+       
+      
+                const num2=parseInt($("#num2").val());
+                var num3=num1+num2;
+              
+
+                $("#ans").text("addition is: "+num3);
+             
+            });
+
+            $("#sub").click(function(){
+                const num1 =parseInt($("#num1").val());
+       
+      
+                const num2=parseInt($("#num2").val());
+              
+                var num4=num1-num2;
+             
+
+           
+                $("#ans").text("subtraction is: "+num4);
+            
+            });
+            
+            $("#mul").click(function(){
+                const num1 =parseInt($("#num1").val());
+       
+      
+                const num2=parseInt($("#num2").val());
+              
+                var num5=num1*num2;
+                
+
+              
+                $("#ans").text("multiplication is: "+num5);
+               
+            });
+
+            $("#dev").click(function(){
+                const num1 =parseInt($("#num1").val());
+       
+      
+                const num2=parseInt($("#num2").val());
+            
+                var num6=num1/num2;
+
+                $("#ans").text("division is: "+num6);
+            });
+
+
+
+     
+        
+        
+
+      
+    });
+
+
+    </script>
+    
+</body>
+</html>
