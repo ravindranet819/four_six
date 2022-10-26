@@ -5,42 +5,58 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <style>
-         div p{
-            background-color: aqua;
-            color: white;
-        } 
-        div > p{
-            background-color: hotpink;
-            color: whitesmoke;
-
+        .parent,.showme{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
-        div + P{        
-            background-color: darkgreen;
-            color: white;
-
+        .idk{
+            background-image: linear-gradient(crimson,green,blue,black);
+            background-attachment: fixed;
+            background-size: cover;
         }
-         
-          div ~ p{   
-            background-color: dodgerblue;
-            color: bisque;
-         }
-        
-
+        h1{
+            color: white;
+            font-size: 35px;
+        }
     </style>
 </head>
-<body>
-    <div>
-        <p> i am first p</p>
-        <p> i am last p</p>
-        <div>
-            <h1>i am heading</h1>
-            <p>inside section</p>
+<body >
+    <div class="parent">
+        <div class="input">
+            <input type="text" placeholder="enter your name here" id="inputme">
+        </div><br><br>
+
+        <div class="btn">
+            <button onclick="show()">click here</button>
         </div>
     </div>
-    <p>i am first sibling</p>
-    <p>i am last sibling</p>
-    <p>i am last sibling</p>
-    <p>i am last sibling</p>
+
+    <div class="showme">
+        <h1 id="h1"></h1>
+    </div>
+
+    <script>
+             $(function() {
+                
+            $("button").click(function(){
+              var x=$("#inputme").val();
+              $("#h1").text("Happy diwali dear"+" "+x);
+              $(".parent").hide();
+              $("body").addClass("idk");
+
+
+             
+            });
+
+
+             })
+
+
+    </script>
+    
 </body>
 </html>
