@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang = "en">
+   <head>
+      <meta charset = "utf-8">
+      <title>jQuery UI Autocomplete - Default functionality</title>
+		
+      <link rel = "stylesheet" 
+         href = "//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+			
+      <script type = "text/javascript" 
+         src = "https://www.tutorialspoint.com/jquery/jquery-3.6.0.js">
+      </script>
+		
+      <script type = "text/javascript" 
+         src = "https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js">
+      </script>
+  
+      <script>
+         $(function() {
+            var available_states = [
+               "maharastra",
+               "delhi",
+               "hariyana",
+               "gujrat",
+               "tamilnadu",
+               "karnataka",
+      
+            ];
+
+            var skills=[145,223,"3267",476,6980]
+				
+            $( "#tags" ).autocomplete({
+               source: available_states
+            });
+            $("#skil").autocomplete({source: skills})
+				
+         });
+      </script>
+   </head>
+
+   <body>
+      <div>
+         <label for = "tags">states: </label>
+         <input id = "tags"><br><br>
+         <label for = "skills">skills: </label>
+         <input id = "skil">
+      </div>
+ 
+   </body>
+</html>
