@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            background-color: crimson;
+            color: white;
+        }
+        th{
+            background-color: darkorange;
+            color: wheat;
+            font-size: 30px;
+        }
+        tr:nth-child(even){
+            background-color: darkgreen;
+            color: white;
+
+        }
+        tr:nth-child(odd){
+            background-color: rgb(0, 0, 255);
+            color: white;
+
+        }
+        .click{
+            background-color: crimson;
+            font-size: 30px;
+            color: white;
+            border-radius: 10px;
+            width: 200px;
+
+        }
+
+    </style>
+
+    <!-- Ajax uses XHTML for content, CSS for presentation, along with Document Object Model and JavaScript for dynamic content display.
+
+Conventional web applications transmit information to and from the sever using synchronous requests. It means you fill out a form, hit submit, and get directed to a new page with new information from the server.
+
+With AJAX, when you hit submit, JavaScript will make a request to the server, interpret the results, and update the current screen. In the purest sense, the user would never know that anything was even transmitted to the server.
+
+XML is commonly used as the format for receiving server data, although any format, including plain text, can be used.
+
+AJAX is a web browser technology independent of web server software.
+
+A user can continue to use the application while the client program requests information from the server in the background.
+
+Intuitive and natural user interaction. Clicking is not required, mouse movement is a sufficient event trigger. -->
+</head>
+
+<body>
+    <table id="demo" border="1" width="100%"> 
+        <tr>
+            <th>id</th>
+            <th>title</th>
+            <th>User id</th>
+            <th>completed</th>
+        </tr>
+
+    </table>
+    <div class="click" onclick="loadDoc()">click</div>
+    <script>
+        // function loadDoc() {
+        //     xhttp = new XMLHttpRequest();
+
+        //     xhttp.onreadystatechange = function () {
+        //         if (this.readyState == 4 && this.status == 200) {
+        //             var a = this.responseText;
+        //             const b=JSON.parse(a);
+
+
+
+
+        //             document.getElementById("demo").innerText=b[1].title;
+        //             console.log(b[1]);
+
+
+        //         }
+        //     };
+
+        //     xhttp.open("GET", 'https://jsonplaceholder.typicode.com/todos', true);
+        //     xhttp.send();
+        // }
+
+
+        function loadDoc() {
+            fetch('https://jsonplaceholder.typicode.com/todos')
+                .then(response => response.json())
+                .then((json) => {
+                    var a = document.getElementById("demo")
+
+                    for (let i = 0; i < json.length; i++) {
+
+                        var p = document.createElement("tr");
+                        var obj=json[i]
+
+                        for(j in obj){
+                            var td = document.createElement("td");
+
+                            var s = document.createTextNode(obj[j]);
+                        td.appendChild(s);
+                        p.appendChild(td);
+
+
+                        }
+
+                       
+
+                        var e = document.getElementById("demo");
+                        e.appendChild(p);
+                    }
+                   
+
+                })
+
+        }
+    </script>
+
+</body>
+
+
+</html>

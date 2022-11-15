@@ -1,0 +1,227 @@
+@media only screen and (min-width: 1200px) {
+    * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+
+    .container {
+        background-color: rgb(0, 0, 0);
+
+    }
+
+    .header {
+        height: 10vh;
+        display: flex;
+        align-items: center;
+        background-color: rgb(57, 53, 53);
+    }
+
+    .header li {
+        display: inline;
+    }
+
+    li a {
+        text-decoration: none;
+        font-size: 20px;
+        color: crimson;
+        background-color: burlywood;
+        border-radius: 5px;
+    }
+    li a:hover{
+      
+        color: crimson;
+      
+        
+
+    }
+
+    .home-main {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .content {
+        display: flex;
+        width: 40vw;
+        height: 100vh;
+        text-align: justify;
+        justify-content: space-around;
+        align-items: center;
+
+
+    }
+
+    .text {
+
+        padding-left: 100px;
+        font-size: 20px;
+        color: red;
+
+
+
+    }
+
+    .text::first-letter {
+        font-size: 30px;
+    }
+
+    @keyframes wordloop {
+        0% {
+            box-shadow: 0px 0px 4px white, 0px 0px 4px white, 0px 0px 4px white;
+        }
+
+        100% {
+            box-shadow: 0px 0px 6px white, 0px 0px 6px rgb(255, 255, 255), 0px 0px 6px rgb(255, 255, 255);
+        }
+
+    }
+
+    .image {
+        width: 40vw;
+        height: 100vh;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+    }
+
+    .image_in {
+
+        background-size: cover;
+        border-radius: 20px;
+
+    }
+
+    .image_in img {
+        width: 100%;
+
+    }
+
+    .about {
+        height: 100vh;
+        width: 100vw;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+    }
+
+    .about_main {
+        color: red;
+        font-size: 20px;
+        margin-left: 50px;
+        margin-right: 50px;
+
+
+    }
+
+    .about_heading {
+        color: white;
+        font-size: 100px;
+        text-shadow: 0px 0px 1px red, 0px 0px 2px red, 0px 0px 3px red, 0px 0px 4px red, 0px 0px 5px red, 0px 0px 6px red, 0px 0px 7px red, 0px 0px 8px red, 0px 0px 9px red;
+
+    }
+
+    .divider {
+        background-image: linear-gradient(red, black);
+
+    }
+
+    .project_in {
+        background-color: azure;
+        box-shadow: 0px 0px 1px red, 0px 0px 2px red, 0px 0px 3px red, 0px 0px 4px red, 0px 0px 5px red, 0px 0px 6px red, 0px 0px 7px red, 0px 0px 8px red, 0px 0px 9px red;
+        width: 300px;
+        height: 300px;
+        border-radius: 5px;
+        margin: 10px;
+    }
+
+    .project_main {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .project {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .project1_in_img {
+        background-image: url("project1.png");
+        width: 300px;
+        height: 200px;
+        background-size: cover;
+        background-repeat: round;
+    }
+
+    .project2_in_img {
+        background-image: url("project4.jpg");
+        width: 300px;
+        height: 200px;
+        background-size: cover;
+        background-repeat: round;
+    }
+
+    .project3_in_img {
+        background-image: url("project3.jpg");
+        width: 300px;
+        height: 200px;
+        background-size: cover;
+        background-repeat: round;
+    }
+
+    .project_in_content {
+        text-align: center;
+        color: red;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+
+    }
+
+    .innerfooter {
+        width: 200px;
+        height: 200px;
+        color: red;
+
+
+    }
+
+    .innerfooterimg {
+        width:100px ;
+        height: 100px;
+        border-radius: 50%;
+
+        background-image: url("pro.jpg");
+        background-size: cover;
+        background-repeat: round;
+
+
+    }
+    a{
+        text-decoration: none;
+        color: red;
+    }
+    .copy{
+        text-align: center;
+        color: red;
+        font-size: 20px;
+
+    }
+
+
+}

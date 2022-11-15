@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bomer.min.css" />
+    <link rel="stylesheet" href="jquery.mobile.icons.min.css" />
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+
+
+
+
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <style>
+        table {
+            width: 100%;
+            border-spacing: 0;
+        }
+
+        th {
+            text-align: left;
+        }
+
+        th h3 {
+            margin: .6em 0 .6em .5em;
+        }
+
+        th,
+        td {
+            vertical-align: top;
+            border-top: 1px solid #eee;
+            padding: 1px 3px;
+            background-color: #fcfcfc;
+        }
+
+        td .ui-btn {
+            margin: .4em 0 .5em 0;
+        }
+
+        td .ui-btn-inner {
+            padding: .4em 15px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <form>
+            <input type="button" data-icon="delete" value="Input">
+            <div class="ui-input-btn ui-btn ui-icon-delete ui-btn-icon-left">
+                    Enhanced
+                    <input type="button" data-enhanced="true" value="Enhanced">
+                </div>
+    </form>
+
+    <button class="ui-input-btn ui-btn ui-icon-delete ui-btn-icon-left" data-enhanced="true">click</button>
+
+    <form>
+            <fieldset data-role="controlgroup" data-type="horizontal">
+                    <legend>Horizontal:</legend>
+                    <input type="checkbox" name="checkbox-h-2a" id="checkbox-h-2a">
+                    <label for="checkbox-h-2a">One</label>
+                    <input type="checkbox" name="checkbox-h-2b" id="checkbox-h-2b">
+                    <label for="checkbox-h-2b">Two</label>
+                    <input type="checkbox" name="checkbox-h-2c" id="checkbox-h-2c">
+                    <label for="checkbox-h-2c">Three</label>
+                </fieldset>
+    </form>
+
+
+    <div data-role="collapsible" data-theme="b" data-content-theme="b">
+            <h4>Heading</h4>
+            <p>I'm the collapsible content with a themed content block set to "b".</p>
+
+
+
+    </div>
+    <div data-role="collapsible" data-theme="b" data-content-theme="b">
+            <h4>Headinga</h4>
+            <p>I'm the collapsiblea themed content block set to "b".</p>
+
+
+    </div>
+
+    <br><br>
+    <button type="button" data-icon="gear" data-iconpos="right" data-mini="true" data-inline="true"
+        id="add">Add</button>
+    <button type="button" data-icon="plus" data-iconpos="right" data-mini="true" data-inline="true" id="expand">Expand
+        last</button>
+    <button type="button" data-icon="minus" data-iconpos="right" data-mini="true" data-inline="true"
+        id="collapse">Collapse last</button>
+    <div data-role="collapsibleset" data-content-theme="a" data-iconpos="right" id="set">
+            <div data-role="collapsible" id="set1" data-collapsed="true">
+                    <h3>Section 1</h3>
+                    <p>I'm the collapsible content.</p>
+                </div>
+    </div>
+    <script>
+        $(document).on("pagecreate", function () {
+            var nextId = 1;
+            $("#add").click(function () {
+                nextId++;
+                var content = "<div data-role='collapsible' id='set" + nextId + "'><h3>Section " + nextId + "</h3><p>I am the collapsible content in a set so this feels like an accordion. I am hidden by default because I have the 'collapsed' state; you need to expand the header to see me.</p></div>";
+                $("#set").append(content).collapsibleset("refresh");
+            });
+            $("#expand").click(function () {
+                $("#set").children(":last").collapsible("expand");
+            });
+            $("#collapse").click(function () {
+                $("#set").children(":last").collapsible("collapse");
+            });
+        });
+    </script>
+
+    <table margin="0">
+            <tbody>
+            <tr>
+                        <th>
+                    <h3>fade</h3>
+                </th>
+                        <td><a href="page-transitions-dialog.html" data-rel="dialog" data-transition="fade"
+                        class="ui-btn ui-corner-all ui-shadow ui-btn-inline">dialog</a></td>
+                        <td><a href="page-transitions-page.html" data-transition="fade"
+                        class="ui-btn ui-corner-all ui-shadow ui-btn-inline">page</a></td>
+                    </tr>
+                <tr>
+                        <th>
+                    <h3>pop</h3>
+                </th>
+                        <td><a href="page-transitions-dialog.html" data-rel="dialog" data-transition="pop"
+                        class="ui-btn ui-corner-all ui-shadow ui-btn-inline">dialog</a></td>
+                        <td><a href="page-transitions-page.html" data-transition="pop"
+                        class="ui-btn ui-corner-all ui-shadow ui-btn-inline">page</a></td>
+                    </tr>
+                <tr>
+                        <th>
+                    <h3>flip</h3>
+                </th>
+                        <td><a href="page-transitions-dialog.html" data-rel="dialog" data-transition="flip"
+                        class="ui-btn ui-corner-all ui-shadow ui-btn-inline">dialog</a></td>
+                        <td><a href="page-transitions-page.html" data-transition="flip"
+                        class="ui-btn ui-corner-all ui-shadow ui-btn-inline">page</a></td>
+                    </tr>
+                <tr>
+                        <th>
+                    <h3>turn</h3>
+                </th>
+                        <td><a href="page-transitions-dialog.html" data-rel="dialog" data-transition="turn"
+                        class="ui-btn ui-corner-all ui-shadow ui-btn-inline">dialog</a></td>
+                        <td><a href="bootstrap.html" data-transition="turn"
+                        class="ui-btn ui-corner-all ui-shadow ui-btn-inline">page</a></td>
+                    </tr>
+                <tr>
+                        <th>
+                    <h3>flow</h3>
+                </th>
+                        <td><a href="page-transitions-dialog.html" data-rel="dialog" data-transition="flow"
+                        class="ui-btn ui-corner-all ui-shadow ui-btn-inline">dialog</a></td>
+                        <td><a href="page-transitions-page.html" data-transition="flow"
+                        class="ui-btn ui-corner-all ui-shadow ui-btn-inline">page</a></td>
+                    </tr>
+                <tr>
+                        <th>
+                    <h3>slidefade</h3>
+                </th>
+                        <td><a href="page-transitions-dialog.html" data-rel="dialog" data-transition="slidefade"
+                        class="ui-btn ui-corner-all ui-shadow ui-btn-inline">dialog</a></td>
+                        <td><a href="page-transitions-page.html" data-transition="slidefade"
+                        class="ui-btn ui-corner-all ui-shadow ui-btn-inline">page</a></td>
+                    </tr>
+                <tr>
+                        <th>
+                    <h3>slide</h3>
+                </th>
+                        <td><a href="page-transitions-dialog.html" data-rel="dialog" data-transition="slide"
+                        class="ui-btn ui-corner-all ui-shadow ui-btn-inline">dialog</a></td>
+                        <td><a href="page-transitions-page.html" data-transition="slide"
+                        class="ui-btn ui-corner-all ui-shadow ui-btn-inline">page</a></td>
+                    </tr>
+                <tr>
+                        <th>
+                    <h3>slideup</h3>
+                </th>
+                        <td><a href="page-transitions-dialog.html" data-rel="dialog" data-transition="slideup"
+                        class="ui-btn ui-corner-all ui-shadow ui-btn-inline">dialog</a></td>
+                        <td><a href="page-transitions-page.html" data-transition="slideup"
+                        class="ui-btn ui-corner-all ui-shadow ui-btn-inline">page</a></td>
+                    </tr>
+                <tr>
+                        <th>
+                    <h3>slidedown</h3>
+                </th>
+                        <td><a href="page-transitions-dialog.html" data-rel="dialog" data-transition="slidedown"
+                        class="ui-btn ui-corner-all ui-shadow ui-btn-inline">dialog</a></td>
+                        <td><a href="page-transitions-page.html" data-transition="slidedown"
+                        class="ui-btn ui-corner-all ui-shadow ui-btn-inline">page</a></td>
+                    </tr>
+                <tr>
+                        <th>
+                    <h3>none</h3>
+                </th>
+                        <td><a href="page-transitions-dialog.html" data-rel="dialog" data-transition="none"
+                        class="ui-btn ui-corner-all ui-shadow ui-btn-inline">dialog</a></td>
+                        <td><a href="page-transitions-page.html" data-transition="none"
+                        class="ui-btn ui-corner-all ui-shadow ui-btn-inline">page</a></td>
+                    </tr>
+        </tbody>
+    </table>
+
+</body>
+
+</html>
